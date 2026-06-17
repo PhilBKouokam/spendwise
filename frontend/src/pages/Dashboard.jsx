@@ -15,7 +15,7 @@ export default function Dashboard() {
         return (
         <div className="d-flex justify-content-center align-items-center" style={{ height: "100vh" }}>
             <div className="spinner-border text-primary" role="status"></div>
-            <p className="text-primary mt-3">Loading dashboard...</p>
+            <p className="text-primary mt-3"> Loading dashboard...</p>
         </div>
     );
     }

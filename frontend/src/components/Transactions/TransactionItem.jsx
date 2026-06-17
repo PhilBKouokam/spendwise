@@ -38,9 +38,9 @@ export default function TransactionItem({ transaction }) {
             Number(amount) === transaction.amount &&
             type === transaction.type && 
             category === transaction.category && 
-            description === transaction.description
+            description === transaction.description &&
+            !receipt
         ) {
-            alert(`description: ${description}, transaction description: ${transaction.description}`);
             setIsEditing(false); 
             return;
         }
