@@ -12,7 +12,10 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: [
+        "http://localhost:5173",
+        "spendwise-nf8mq2q3a-philbkouokams-projects.vercel.app"
+    ],
     credentials: true
 }));
 
