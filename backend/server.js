@@ -14,7 +14,7 @@ const app = express();
 app.use(cors({
     origin: [
         "http://localhost:5173",
-        "https://spendwise-nf8mq2q3a-philbkouokams-projects.vercel.app"
+        "https://spendwise-two-navy.vercel.app"
     ],
     credentials: true,
     methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
