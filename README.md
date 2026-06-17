@@ -24,7 +24,17 @@ A full-stack personal finance tracker built with the MERN stack, featuring JWT a
 
 ## 📸 Screenshots
 
-*(Add 4–6 screenshots here: Dashboard light/dark, receipt upload, transaction list, etc.)*
+### Dashboard (Light Mode)
+![Dashboard Light](screenshots/SpendWise_Light_Dashboard.png)
+
+### Dashboard (Dark Mode)
+![Dashboard Dark](screenshots/SpendWise_Dark_Dashboard.png)
+
+### Receipt Upload Feature
+![Receipt Upload](screenshots/SpendWise_Add_Transaction_Form.png)
+
+### Transaction List
+![Transaction List](screenshots/SpendWise_Transactions_Page.png)
 
 ## 🚀 Quick Start
 
