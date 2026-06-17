@@ -16,7 +16,9 @@ app.use(cors({
         "http://localhost:5173",
         "https://spendwise-nf8mq2q3a-philbkouokams-projects.vercel.app"
     ],
-    credentials: true
+    credentials: true,
+    methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 app.use("/api/upload", uploadRoutes);
