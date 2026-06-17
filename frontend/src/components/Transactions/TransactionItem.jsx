@@ -46,6 +46,7 @@ export default function TransactionItem({ transaction }) {
             ? receipt === transaction.receipt
             : receipt === null
         ) {
+            alert("didn't go through");
             setIsEditing(false); 
             return;
         }
