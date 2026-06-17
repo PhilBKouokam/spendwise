@@ -29,6 +29,17 @@ export default function Transactions() {
         <div>
             <h2 className="text-center mb-5">All Transactions</h2>
 
+            {showForm && <TransactionForm setShowForm={setShowForm}/>}
+
+            <div className="text-center mt-4 mb-4">
+                <button
+                    className={`btn ${showForm ? "btn-danger" : "btn-primary"}`}
+                    onClick={() => setShowForm(!showForm)}
+                >
+                    {showForm ? "Cancel" : "+ New Transaction"}
+                </button>
+            </div>
+
             <div className="row d-flex align-items-center mb-4">
                 <div className="col-md-3 d-flex align-items-center gap-2">
                     <label for="selt">Type: </label>
@@ -75,18 +86,6 @@ export default function Transactions() {
             <div className="mb-5">
                 <TransactionList transactions={filteredTransactions} />
             </div>
-
-            {showForm && <TransactionForm setShowForm={setShowForm}/>}
-
-            <div className="text-center mt-4 mb-4">
-                <button
-                    className={`btn ${showForm ? "btn-danger" : "btn-primary"}`}
-                    onClick={() => setShowForm(!showForm)}
-                >
-                    {showForm ? "Cancel" : "+ New Transaction"}
-                </button>
-            </div>
-
         </div>
     );
 }
