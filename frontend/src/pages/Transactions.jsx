@@ -27,7 +27,7 @@ export default function Transactions() {
 
     return (
         <div>
-            <h2 className="text-center mb-5">All Transactions</h2>
+            <h2 className="text-center mb-3">All Transactions</h2>
 
             {showForm && <TransactionForm setShowForm={setShowForm}/>}
 
