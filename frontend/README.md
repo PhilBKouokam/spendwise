@@ -2,7 +2,8 @@
 
 A full-stack expense tracker with JWT authentication, data visualization, dark mode, and AWS S3 receipt uploads.
 
-**[Live Demo](https://your-vercel-link.vercel.app)** | **[Backend API](https://your-render-link.onrender.com)**
+**Live Demo**: [https://spendwise-two-navy.vercel.app](https://spendwise-two-navy.vercel.app)  
+**Backend API**: [https://spendwise-backend-ple6.onrender.com](https://spendwise-backend-ple6.onrender.com)
 
 ## ✨ Features
 

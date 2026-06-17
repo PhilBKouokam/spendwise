@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext.jsx";
+import { apiFetch } from "../../utils/api.js";
 
 export default function Register() {
     const [username, setUsername] = useState("");
@@ -18,7 +19,7 @@ export default function Register() {
         setLoading(true);
 
         try {
-            const res = await fetch("http://localhost:4600/api/auth/register", {
+            const res = await apiFetch("/api/auth/register", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username, email, password })

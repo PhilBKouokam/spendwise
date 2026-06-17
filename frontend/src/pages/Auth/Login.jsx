@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
+import { apiFetch } from "../../utils/api";
 
 export default function Login() {
     const [email, setEmail] = useState("");
@@ -17,7 +18,7 @@ export default function Login() {
         setLoading(true);
 
         try {
-            const res = await fetch("http://localhost:4600/api/auth/login", {
+            const res = await apiFetch("/api/auth/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password })
@@ -26,7 +27,7 @@ export default function Login() {
             const data = await res.json();
 
             if (!res.ok) {
-                throw new Error(data.message || "Logon failed!");
+                throw new Error(data.message || "Login failed!");
             }
 
             login(data.token);
