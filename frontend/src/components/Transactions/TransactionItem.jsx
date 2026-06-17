@@ -13,10 +13,7 @@ export default function TransactionItem({ transaction }) {
     const [category, setCategory] = useState(transaction.category);
     const [amount, setAmount] = useState(transaction.amount);
     const [description, setDescription] = useState(transaction.description);
-    const [receipt, setReceipt] = useState(() => {
-        if (transaction.receipt) return transaction.receipt;
-        return null;
-    });
+    const [receipt, setReceipt] = useState(null);
 
     const handleViewReceipt = () => {
         if (transaction.receiptUrl) {
@@ -41,12 +38,9 @@ export default function TransactionItem({ transaction }) {
             Number(amount) === transaction.amount &&
             type === transaction.type && 
             category === transaction.category && 
-            description === transaction.description &&
-            receipt 
-            ? receipt === transaction.receipt
-            : receipt === null
+            description === transaction.description
         ) {
-            alert("didn't go through");
+            alert(`description: ${description}, transaction description: ${transaction.description}`);
             setIsEditing(false); 
             return;
         }
